@@ -6,17 +6,17 @@ var orm = {
         connection.query(queryString, function(err, results){
             if (err) throw err;
             cb(results);
-        }); 
+        });
     },
     insertOne: function(burgerName, cb){
-        var queryString = "INSERT INTO burgers_db.burgers (burger_name, devoured, date) VALUE (?, false, CURRENT_TIMESTAMP)"
+        var queryString = "INSERT INTO burgers_db.burgers (burger_name, devoured, date) VALUE (?, false, CURRENT_TIMESTAMP)";
         connection.query(queryString, [burgerName], function(err, results){
             if (err) throw err;
             cb(results);
         });
     },
     updateOne: function(selectedBurger, cb){
-        var queryString = "UPDATE burgers SET devoured = true WHERE burger_name = ?";
+        var queryString = "UPDATE burgers SET devoured = true WHERE id = ?";
         connection.query(queryString, [selectedBurger], function(err, results){
             if (err) throw err;
             cb(results);
