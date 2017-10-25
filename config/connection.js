@@ -9,7 +9,7 @@ if (process.env.JAWSDB_URL) {
     host: 'bqmayq5x95g1sgr9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
     user: 'z28yrmayirvwsw98',
     password: 'swmdw55gg2m3waqp',
-    database: 'xab9uqbcld3rat3s'
+    database: 'cx4u3sii96vba3rz'
   });
 }
 
@@ -23,5 +23,5 @@ connection.connect(function(err) {
 });
 
 // Export connection for our ORM to use.
-connection.connect();
+// connection.connect();
 module.exports = connection;
